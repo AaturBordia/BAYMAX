@@ -259,8 +259,10 @@ if __name__ == "__main__":
         elif 'help' in query:
             help_command()
         elif 'satisfied'in query:
-            speech("I cannot deactivate until you say that you are satisfied with your care.") 
-            speech("Shutting down. Have a nice day!")
-            break 
+            speech("I cannot deactivate until you say that you are satisfied with your care.")
+            q2 = take_instructions()
+            if 'i am satisfied with my care' in q2 : 
+                speech("Shutting down. Have a nice day!")
+                break 
         
  
